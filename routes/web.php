@@ -20,5 +20,5 @@ Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::get('/karyawan/tambah', [UserController::class, 'create'])->name('create');
 Route::post('/karyawan/tambah/baru', [UserController::class, 'store'])->name('store');
 Route::get('/kariyawan/lihat', [UserController::class, 'view'])->name('view');
-Route::get('/karyawan/edit', [UserController::class, 'edit'])->name('edit');
+Route::get('/karyawan/edit/', [UserController::class, 'edit'])->name('edit');
 Route::put('/karyawan/update', [UserController::class, 'update'])->name('update');

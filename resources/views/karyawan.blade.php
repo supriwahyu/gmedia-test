@@ -30,8 +30,8 @@
 	                        <input type="hidden" name="_method" value="DELETE" />
 	                        <div class="btn-group">
 	                            <!-- <a class="btn btn-info" href="{{ URL::route('view') }}">Lihat</a> -->
-	                            <a class="btn btn-success" href="{{route('edit')}}" title="Ubah Data ">Ubah</a>
-	                            <button title="Hapus Data Artikel" onclick="confirmDelete()" type="submit" class="btn btn-danger">Hapus</button>
+	                            <a class="btn btn-success" href="{{route('edit', $response['response'][0])}}" title="Ubah Data ">Ubah</a>
+	                            <button title="Hapus Data" onclick="confirmDelete()" type="submit" class="btn btn-danger">Hapus</button>
 	                        </div>
 	                    </form>
                     </td>

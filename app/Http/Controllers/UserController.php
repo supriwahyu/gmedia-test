@@ -145,6 +145,7 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {
+        
 
         $response = Http::withToken('8godoajVqNNOFz21npycK6iofUgFXl1kluEJt/WYFts9C8IZqUOf7rOXCe0m4f9B')->withHeaders([
             'Client-Service' => 'gmedia-recruitment',
@@ -158,8 +159,8 @@ class UserController extends Controller
             'gender' => $request->gender,
             'tgl_lahir' => $request->tgl_lahir,
         ]);
-
-        return redirect()->route('karyawan');
+        $body = json_decode($response->getBody());
+        return dd($body);
     }
 
     /**
